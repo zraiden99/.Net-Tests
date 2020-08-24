@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Child.xsd" />
+    <None Remove="DataSet.xsd" />
+    <None Remove="DataSetWriteOut.xml" />
+    <None Remove="DataSetWriteOut.xml.bak" />
+    <None Remove="DataSetWriteOut.xsd" />
+    <None Remove="DataSetWriteOut_app1.xsd" />
+    <None Remove="Parent.xsd" />
+    <None Remove="Parent.xsd.bak" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App\3.1.3\Microsoft.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App\3.1.3\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App\3.1.3\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App\3.1.3\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App\3.1.3\System.Data.DataSetExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App\3.1.3\System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App\3.1.3\System.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App\3.1.3\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App\3.1.3\System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App\3.1.3\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App\3.1.3\System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App\3.1.3\System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App\3.1.3\System.Runtime.Serialization.Formatters.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Xml">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App\3.1.3\System.Runtime.Serialization.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App\3.1.3\System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App\3.1.3\System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Serialization">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App\3.1.3\System.Xml.Serialization.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

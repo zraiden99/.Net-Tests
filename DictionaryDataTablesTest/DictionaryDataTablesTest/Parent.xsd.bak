@@ -1,0 +1,59 @@
+﻿<?xml version="1.0"?>
+<xs:schema id="ParentSchema"
+           targetNamespace="C://Users/hurricane/source/repos/DictionaryDataTablesTest/DictionaryDataTablesTest/Parent.xsd"
+           xmlns:ParentSchemas="C://Users/hurricane/source/repos/DictionaryDataTablesTest/DictionaryDataTablesTest/Parent.xsd"
+           xmlns:ChildSchemas="C://Users/hurricane/source/repos/DictionaryDataTablesTest/DictionaryDataTablesTest/Child.xsd"
+           xmlns="C://Users/hurricane/source/repos/DictionaryDataTablesTest/DictionaryDataTablesTest/Parent.xsd"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+           xmlns:msprop="urn:schemas-microsoft-com:xml-msprop"
+           elementFormDefault="qualified" attributeFormDefault="qualified">
+
+  <!---->
+  <xs:import namespace="C://Users/hurricane/source/repos/DictionaryDataTablesTest/DictionaryDataTablesTest/Child.xsd" schemaLocation="Child.xsd"/>
+  <!--xs:import namespace="C://Users/hurricane/source/repos/DictionaryDataTablesTest/DictionaryDataTablesTest/DataSet.xsd" schemaLocation="DataSet.xsd"/-->
+
+  <xs:attribute name="ID" type="xs:ID"/>
+  
+  <xs:complexType name="ParentChild_Type" msdata:IsDataSet="true" msdata:IsNested="true" msdata:AutoIncrement="true" msprop:EnableDataSetManager="true">
+    <xs:sequence minOccurs="0">
+      <xs:element name="Name" type="xs:string" minOccurs="0"/>
+      <xs:element name="Level" type="xs:integer" minOccurs="0"/>
+      <xs:element name="ChildLevel2_Reference" type="xs:integer" minOccurs="0"/>
+      <!--xsd:element name="ChildHead_Reference" type="ChildSchemas:Child_Type" minOccurs="0"/-->
+    </xs:sequence>
+    <xs:attribute ref="ParentSchemas:ID"/>
+  </xs:complexType>
+
+  <!--xs:element name="FirstParentChildHead" type="ParentSchemas:ParentChild_Type"/-->
+  <!--xs:element name="SecondParentChildHead" substitutionGroup="ParentSchemas:FirstParentChildHead"/-->
+  <!--xs:element name="SecondParentChildHead" type="ParentSchemas:ParentChild_Type"/-->
+
+  <xs:complexType name="ParentLevel1Child_Reference_Type" msdata:IsDataSet="true" msdata:IsNested="true" msdata:AutoIncrement="true" msprop:EnableDataSetManager="true">
+    <xs:sequence minOccurs="0">
+      <!--xs:element id="FirstParentChild_Reference" ref="ParentSchemas:FirstParentChildHead" minOccurs="0"/-->
+      <!--xs:element id="SecondParentChild_Reference" ref="ParentSchemas:SecondParentChildHead" minOccurs="0"/-->
+      <xs:element name="Child_Reference" type="ParentSchemas:ParentChild_Type" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute ref="ParentSchemas:ID"/>
+  </xs:complexType>
+
+  <!--xsd:element name="ParentLevel1Child_Reference" type="ParentSchemas:ParentLevel1Child_Reference_Type"/-->
+  
+  <xs:complexType name="Parent_Type" msdata:IsDataSet="true" msdata:AutoIncrement="true" msprop:EnableDataSetManager="true">
+    <xs:sequence minOccurs="0">
+      <xs:element name="Name" type="xs:string" minOccurs="0"/>
+      <xs:element name="Level" type="xs:integer" minOccurs="0"/>
+      <xs:choice minOccurs="0">
+        <xs:element name="ParentLevel2_Reference" type="xs:integer" minOccurs="0"/>
+        <xs:element name="ParentLevel1Child_ID" type="ParentSchemas:ParentLevel1Child_Reference_Type" minOccurs="0"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute ref="ParentSchemas:ID"/>
+  </xs:complexType>
+
+  <xs:element name="ParentSchema" type="ParentSchemas:Parent_Type"/>
+  
+
+
+</xs:schema>

@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="yes"?>
+<ParentSchemaDataSet xmlns="C://Users/hurricane/source/repos/DictionaryDataTablesTest/DictionaryDataTablesTest/Parent.xsd">
+  <ChildHead>
+    <Name>FOURTHCHILD</Name>
+    <Level>2</Level>
+  </ChildHead>
+  <ParentSchema>
+    <Name>FIRSTPARENT</Name>
+    <Level>0</Level>
+  </ParentSchema>
+  <Child_Reference>
+    <Name>FIRSTCHILD</Name>
+    <Level>1</Level>
+  </Child_Reference>
+  <ParentHeadLevel2>
+    <Name>SECONDPARENT</Name>
+    <Level>2</Level>
+  </ParentHeadLevel2>
+</ParentSchemaDataSet>

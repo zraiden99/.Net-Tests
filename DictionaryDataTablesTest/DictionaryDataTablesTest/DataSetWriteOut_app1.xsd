@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema targetNamespace="C://Users/hurricane/source/repos/DictionaryDataTablesTest/DictionaryDataTablesTest/Child.xsd" xmlns:mstns="C://Users/hurricane/source/repos/DictionaryDataTablesTest/DictionaryDataTablesTest/Parent.xsd" xmlns="C://Users/hurricane/source/repos/DictionaryDataTablesTest/DictionaryDataTablesTest/Child.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app1="C://Users/hurricane/source/repos/DictionaryDataTablesTest/DictionaryDataTablesTest/Child.xsd">
+  <xs:import namespace="C://Users/hurricane/source/repos/DictionaryDataTablesTest/DictionaryDataTablesTest/Parent.xsd" schemaLocation="DataSetWriteOut.xsd" />
+  <xs:complexType name="Child_Type">
+    <xs:sequence>
+      <xs:element ref="mstns:ParentLevel2_Reference" minOccurs="0" />
+      <xs:element ref="mstns:Parent_Reference" minOccurs="0" />
+      <xs:element ref="mstns:Name" minOccurs="0" />
+      <xs:element ref="mstns:Level" minOccurs="0" />
+      <xs:element name="ParentHeadLevel2" type="mstns:Parent_Type" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
