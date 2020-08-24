@@ -1,0 +1,7 @@
+C:\Users\hurricane\source\repos\NetFrameworkDataTableTest\NetFrameworkDataTableTest\bin\Debug\NetFrameworkDataTableTest.exe.config
+C:\Users\hurricane\source\repos\NetFrameworkDataTableTest\NetFrameworkDataTableTest\bin\Debug\NetFrameworkDataTableTest.exe
+C:\Users\hurricane\source\repos\NetFrameworkDataTableTest\NetFrameworkDataTableTest\bin\Debug\NetFrameworkDataTableTest.pdb
+C:\Users\hurricane\source\repos\NetFrameworkDataTableTest\NetFrameworkDataTableTest\obj\Debug\NetFrameworkDataTableTest.csprojAssemblyReference.cache
+C:\Users\hurricane\source\repos\NetFrameworkDataTableTest\NetFrameworkDataTableTest\obj\Debug\NetFrameworkDataTableTest.csproj.CoreCompileInputs.cache
+C:\Users\hurricane\source\repos\NetFrameworkDataTableTest\NetFrameworkDataTableTest\obj\Debug\NetFrameworkDataTableTest.exe
+C:\Users\hurricane\source\repos\NetFrameworkDataTableTest\NetFrameworkDataTableTest\obj\Debug\NetFrameworkDataTableTest.pdb

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0"?>
+<xs:schema id="ChildSchema"
+           targetNamespace="C://Users/hurricane/source/repos/NetframeworkDataTableTest/NetframeworkDataTableTest/Child.xsd"
+           xmlns:ChildSchemas="C://Users/hurricane/source/repos/NetframeworkDataTableTest/NetframeworkDataTableTest/Child.xsd"
+           xmlns:ParentSchemas="C://Users/hurricane/source/repos/NetframeworkDataTableTest/NetframeworkDataTableTest/Parent.xsd"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+           xmlns:msprop="urn:schemas-microsoft-com:xml-msprop"
+           elementFormDefault="qualified" attributeFormDefault="qualified">
+
+  <xs:import namespace="C://Users/hurricane/source/repos/NetframeworkDataTableTest/NetframeworkDataTableTest/Parent.xsd" schemaLocation="Parent.xsd"/>
+
+  <xs:element name="ParentSchema_Reference" substitutionGroup="ParentSchemas:ParentTable"/>
+  
+  <xs:complexType name="Child_Type" msdata:IsDataSet="true" msdata:IsNested="true" msprop:EnableDataSetManager="true">
+    <xs:sequence minOccurs="0">
+      <xs:choice minOccurs="0">
+        <xs:element name="ParentLevel2_Reference" type="xs:integer" minOccurs="0"/>
+        <xs:element name="Parent_Reference" type="xs:integer" minOccurs="0"/>
+      </xs:choice>
+      <xs:element name="Name" type="xs:string" minOccurs="0"/>
+      <xs:element name="Level" type="xs:integer" minOccurs="0"/>
+      <xs:element id="Parent_Ref" ref="ChildSchemas:ParentSchema_Reference" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="ChildHead" type="ChildSchemas:Child_Type" msprop:EnableDataSetManager="true"/>
+  
+</xs:schema>

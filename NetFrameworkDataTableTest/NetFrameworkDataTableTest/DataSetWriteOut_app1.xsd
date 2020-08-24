@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema targetNamespace="C://Users/hurricane/source/repos/NetframeworkDataTableTest/NetframeworkDataTableTest/Child.xsd" xmlns:mstns="C://Users/hurricane/source/repos/NetframeworkDataTableTest/NetframeworkDataTableTest/Parent.xsd" xmlns="C://Users/hurricane/source/repos/NetframeworkDataTableTest/NetframeworkDataTableTest/Child.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app1="C://Users/hurricane/source/repos/NetframeworkDataTableTest/NetframeworkDataTableTest/Child.xsd">
+  <xs:import namespace="C://Users/hurricane/source/repos/NetframeworkDataTableTest/NetframeworkDataTableTest/Parent.xsd" schemaLocation="DataSetWriteOut.xsd" />
+  <xs:complexType name="Child_Type">
+    <xs:sequence>
+      <xs:element name="ParentLevel2_Reference" type="xs:integer" minOccurs="0" />
+      <xs:element name="ChildLevel2_Reference" type="xs:integer" minOccurs="0" />
+      <xs:element name="Name" type="xs:string" minOccurs="0" />
+      <xs:element name="Level" type="xs:integer" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Name" type="xs:string" />
+  <xs:element name="Level" type="xs:integer" />
+  <xs:element name="ParentLevel2_Reference" type="xs:integer" />
+  <xs:attribute name="ParentTable_Id" msdata:AutoIncrement="true" type="xs:int" msdata:AllowDBNull="false" />
+  <xs:element name="ChildHeadLevel2" type="app1:Child_Type" msprop:EnableDataSetManager="true" />
+  <xs:element name="ChildHead" type="app1:Child_Type" msprop:EnableDataSetManager="true" />
+</xs:schema>

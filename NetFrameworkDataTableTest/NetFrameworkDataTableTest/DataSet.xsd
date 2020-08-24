@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet"
+           targetNamespace="C://Users/hurricane/source/repos/DictionaryDataTablesTest/DictionaryDataTablesTest/DataSet.xsd"
+           xmlns:DataSetSchemas="C://Users/hurricane/source/repos/DictionaryDataTablesTest/DictionaryDataTablesTest/DataSet.xsd"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+           elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+  <!--xs:import namespace="C://Users/hurricane/source/repos/DictionaryDataTablesTest/DictionaryDataTablesTest/Parent.xsd" schemaLocation="Parent.xsd"/-->
+
+  <!--xs:element name="ParentHead" type="ParentSchemas:Parent_Type"></xs:element-->
+
+  <xs:simpleType name="Integer_Type">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="String_Type">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  
+</xs:schema>

@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<ParentSchema xmlns="C://Users/hurricane/source/repos/NetframeworkDataTableTest/NetframeworkDataTableTest/Parent.xsd">
+  <ParentTable>
+    <Name>PARENTTABLE</Name>
+    <Level>0</Level>
+    <ParentLevel1Child_ID>
+      <FirstParentChildHead>
+        <Name>FIRSTPARENTCHILDHEAD</Name>
+        <Level>1</Level>
+        <ChildLevel2_Reference>0</ChildLevel2_Reference>
+        <ChildHeadLevel2 xmlns="C://Users/hurricane/source/repos/NetframeworkDataTableTest/NetframeworkDataTableTest/Child.xsd">
+          <ParentLevel2_Reference>0</ParentLevel2_Reference>
+          <ChildLevel2_Reference>0</ChildLevel2_Reference>
+          <Name>CHILDHEADLEVEL2</Name>
+          <Level>2</Level>
+          <ParentHeadLevel2>
+            <Name>PARENTHEADLEVEL2</Name>
+            <Level>2</Level>
+            <ParentLevel2_Reference>0</ParentLevel2_Reference>
+          </ParentHeadLevel2>
+        </ChildHeadLevel2>
+      </FirstParentChildHead>
+      <Child_Reference>
+        <Name>CHILD_REFERENCE</Name>
+        <Level>1</Level>
+        <ChildHead_Reference>
+          <Name xmlns="C://Users/hurricane/source/repos/NetframeworkDataTableTest/NetframeworkDataTableTest/Child.xsd">CHILDHEAD_REFERENCE</Name>
+          <Level xmlns="C://Users/hurricane/source/repos/NetframeworkDataTableTest/NetframeworkDataTableTest/Child.xsd">1</Level>
+        </ChildHead_Reference>
+      </Child_Reference>
+    </ParentLevel1Child_ID>
+  </ParentTable>
+</ParentSchema>

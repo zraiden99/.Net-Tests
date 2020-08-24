@@ -1,0 +1,61 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="ParentSchema" targetNamespace="C://Users/hurricane/source/repos/NetframeworkDataTableTest/NetframeworkDataTableTest/Parent.xsd" xmlns:mstns="C://Users/hurricane/source/repos/NetframeworkDataTableTest/NetframeworkDataTableTest/Parent.xsd" xmlns="C://Users/hurricane/source/repos/NetframeworkDataTableTest/NetframeworkDataTableTest/Parent.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app1="C://Users/hurricane/source/repos/NetframeworkDataTableTest/NetframeworkDataTableTest/Child.xsd">
+  <xs:import namespace="C://Users/hurricane/source/repos/NetframeworkDataTableTest/NetframeworkDataTableTest/Child.xsd" schemaLocation="DataSetWriteOut_app1.xsd" />
+  <xs:element name="ChildHead_Reference" type="app1:Child_Type" />
+  <xs:complexType name="Parent_Type">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+      <xs:element name="Level" type="xs:integer" minOccurs="0" msdata:Ordinal="2" />
+      <xs:element name="ParentLevel2_Reference" type="xs:integer" minOccurs="0" msdata:Ordinal="3" />
+      <xs:element name="ParentLevel1Child_ID" type="mstns:ParentLevel1Child_Reference_Type" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:ID" />
+  </xs:complexType>
+  <xs:complexType name="ParentLevel1Child_Reference_Type">
+    <xs:sequence>
+      <xs:element name="FirstParentChildHead" type="mstns:ParentChild_Type" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="Child_Reference" type="mstns:ParentChild_Type" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:ID" />
+  </xs:complexType>
+  <xs:complexType name="ParentChild_Type">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+      <xs:element name="Level" type="xs:integer" minOccurs="0" msdata:Ordinal="2" />
+      <xs:element name="ChildLevel2_Reference" type="xs:integer" minOccurs="0" msdata:Ordinal="3" />
+      <xs:element ref="ChildHead_Reference" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element ref="app1:ChildHeadLevel2" />
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:ID" />
+  </xs:complexType>
+  <xs:element name="ParentTable" type="mstns:Parent_Type" msprop:EnableDataSetManager="true" />
+  <xs:element name="ParentSchema" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="ChildHead_Reference" />
+        <xs:element ref="ParentTable" />
+        <xs:element ref="app1:ChildHead" />
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="ParentHeadLevel2_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//app1:ParentHeadLevel2" />
+      <xs:field xpath="@app1:ParentTable_Id" />
+    </xs:unique>
+    <xs:unique name="ChildHeadLevel2_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//app1:ChildHeadLevel2" />
+      <xs:field xpath="app1:ParentLevel2_Reference" />
+    </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:FirstParentChildHead" />
+      <xs:field xpath="mstns:ChildLevel2_Reference" />
+    </xs:unique>
+    <xs:keyref name="FirstParentChildHead_ChildHeadLevel2" refer="Constraint2" msdata:IsNested="true">
+      <xs:selector xpath=".//app1:ChildHeadLevel2" />
+      <xs:field xpath="app1:ChildLevel2_Reference" />
+    </xs:keyref>
+    <xs:keyref name="ChildHeadLevel2_ParentHeadLevel2" refer="ChildHeadLevel2_Constraint1" msdata:IsNested="true">
+      <xs:selector xpath=".//app1:ParentHeadLevel2" />
+      <xs:field xpath="app1:ParentLevel2_Reference" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>
